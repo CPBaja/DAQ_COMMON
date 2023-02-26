@@ -7,7 +7,6 @@ typedef unsigned char ubyte;
 
 typedef signed char schar;
 typedef signed char int8;
-typedef signed char byte;
 typedef signed char sbyte;
 
 

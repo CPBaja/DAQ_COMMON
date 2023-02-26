@@ -8,9 +8,10 @@
 
 const uint16 TOTAL_STRUCT_SIZE = sizeof(struct car_data);
 
-const uint16 START = 0x6969;
-const byte VERSION = 0x0;
-const int16 CHECKSUM;
+const uint16 PREAMBLE = 0x6969;
+const sbyte VERSION = 0x00;
+
+int16 calculate_cksum(struct car_data *data);
 
 
 
