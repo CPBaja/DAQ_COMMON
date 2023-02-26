@@ -1,7 +1,7 @@
-#ifndef _DATA_
-#define _DATA_
+#ifndef __DATA__
+#define __DATA__
 
-#include "../lib/types.h"
+#include "types.h"
 
 
 struct ecvt_data {
