@@ -78,6 +78,7 @@ struct car_data {
     struct electrons_data electrons;
     struct brakes_data brakes;
     struct steering_data steering;
+    uint8 marker;
 } __attribute__((packed));
 
 #endif
