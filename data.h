@@ -51,12 +51,23 @@ struct electrons_data {
 
 } __attribute__((packed));
 
+struct brakes_data {
+    uint16 fr_wheel_speed;
+    uint16 fl_wheel_speed;
+} __attribute__((packed));
+
+struct steering_data {
+    uint16 steering_rot_pot;
+} __attribute((packed));
+
 struct car_data {
     uint32 time;
     struct ecvt_data ecvt;
     struct suspension_data sus;
     struct powertrain_data pt;
     struct electrons_data electrons;
+    struct brakes_data brakes;
+    struct steering_data steering;
 } __attribute__((packed));
 
 #endif
