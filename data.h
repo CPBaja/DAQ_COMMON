@@ -44,11 +44,21 @@ struct suspension_data {
 } __attribute__((packed));
 
 struct powertrain_data {
-
+    uint16 gearbox_temp;
+    uint16 gearbox_shaft_speed;
 } __attribute__((packed));
 
 struct electrons_data {
-
+    uint16 voltage_sense36;
+    uint16 voltage_sense8_4;
+    uint16 voltage_sense12;
+    uint16 voltage_sense24_1;
+    uint16 voltage_sense24_2;
+    uint16 current_sense_lvbattery;
+    uint16 current_sense_battery;
+    uint16 current_sense_motor1;
+    uint16 current_sense_motor2;
+    uint16 current_sense_solenoid;
 } __attribute__((packed));
 
 struct brakes_data {

@@ -20,8 +20,8 @@ typedef uint16 T_CHECKSUM;
 
 
 struct packet_t {
-    T_PREAMBLE preamble;
-    T_VERSION version;
+    T_PREAMBLE preamble = PREAMBLE;
+    T_VERSION version = VERSION;
     T_DATA data;
     T_CHECKSUM checksum;
 } __attribute ((packed));
