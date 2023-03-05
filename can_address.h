@@ -19,6 +19,7 @@ const int16 SPARK_ADDR = 194;
 
 const int16 FR_WHEEL_SPEED_ADDR = 257;
 const int16 FL_WHEEL_SPEED_ADDR = 258;
+const int16 GEAR_SHAFT_SPEED_ADDR = 259;
 
 const int16 GEAR_THERMAL_ADDR = 321;
 
