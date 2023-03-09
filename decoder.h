@@ -1,6 +1,5 @@
 #pragma once
 #include <Arduino.h>
-#include "communication/communication.h"
 
 /**
  * Constructs the T datatype byte-by-byte.
@@ -31,16 +30,22 @@ inline bool rxr(T *t, size_t *len, uint8_t b)
         return false;
 }
 
+template <typename T_DATA, typename T_PREAMBLE = uint16_t, typename T_CHECKSUM = uint16_t, T_PREAMBLE V_PREAMBLE = 0x6969>
 class Decoder
 {
 private:
-    HardwareSerial *serial;
+    Stream *serial;
 
     bool _f_available;
     packet_t _last_packet;
 
     size_t _len;
-    packet_t _packet;
+    struct
+    {
+        T_PREAMBLE preamble;
+        T_DATA data;
+        T_CHECKSUM checksum;
+    } _packet;
 
     enum
     {
@@ -77,10 +82,10 @@ private:
     {
         switch (_state)
         {
-        case INIT:;
+        case INIT:
             if (rx(&_packet.preamble, &_len, b))
             {
-                if (_packet.preamble == PREAMBLE)
+                if (_packet.preamble == V_PREAMBLE)
                     _state = RX;
 
                 else
@@ -99,7 +104,7 @@ private:
     }
 
 public:
-    Decoder(HardwareSerial *serial)
+    Decoder(Stream *serial)
     {
         this->serial = serial;
     }

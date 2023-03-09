@@ -1,4 +1,3 @@
-template <typename T>
 #pragma once
 
 class Encoder
@@ -7,11 +6,20 @@ class Encoder
     T data;
     T transmitting;
 
+    packet_t packet;
     Encoder()
     {
     }
 
     T* data() {
         return data;
+    }
+
+    send_data(T_DATA dat) {
+        packet.data = dat;
+
+        //set preabmle
+        //set version
+        //calc checksum
     }
 };
