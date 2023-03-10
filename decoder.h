@@ -30,7 +30,7 @@ inline bool rxr(T *t, size_t *len, uint8_t b)
         return false;
 }
 
-template <typename T_DATA, typename T_PREAMBLE = uint16_t, typename T_CHECKSUM = uint16_t, T_PREAMBLE V_PREAMBLE = 0x6969>
+template <typename T_DATA, typename T_PREAMBLE = uint16_t, typename T_CHECKSUM = int16_t, T_PREAMBLE V_PREAMBLE = 0x6969>
 class Decoder
 {
 private:

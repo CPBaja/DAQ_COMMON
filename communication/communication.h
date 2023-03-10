@@ -16,7 +16,7 @@ int16 calculate_cksum(struct car_data *data);
 typedef uint16 T_PREAMBLE;
 typedef uint8 T_VERSION;
 typedef car_data T_DATA;
-typedef uint16 T_CHECKSUM;
+typedef int16 T_CHECKSUM;
 
 
 struct packet_t {
