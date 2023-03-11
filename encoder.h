@@ -11,12 +11,7 @@ private:
     bool _f_available;
 
     size_t _num_to_send;
-    struct
-    {
-        T_PREAMBLE preamble;
-        T_DATA data;
-        T_CHECKSUM checksum;
-    } _packet;
+    struct packet_t _packet;
 
 
     void packet_t_send(T_DATA dat)

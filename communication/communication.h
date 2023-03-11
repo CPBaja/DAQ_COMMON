@@ -14,14 +14,12 @@ const sbyte VERSION = 0x00;
 int16 calculate_cksum(struct car_data *data);
 
 typedef uint16 T_PREAMBLE;
-typedef uint8 T_VERSION;
 typedef car_data T_DATA;
-typedef int16 T_CHECKSUM;
+typedef int32 T_CHECKSUM;
 
 
 struct packet_t {
     T_PREAMBLE preamble = PREAMBLE;
-    T_VERSION version = VERSION;
     T_DATA data;
     T_CHECKSUM checksum;
 } __attribute ((packed));

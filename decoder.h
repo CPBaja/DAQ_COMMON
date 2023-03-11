@@ -40,12 +40,7 @@ private:
     packet_t _last_packet;
 
     size_t _len;
-    struct
-    {
-        T_PREAMBLE preamble;
-        T_DATA data;
-        T_CHECKSUM checksum;
-    } _packet;
+    packet_t _packet;
 
     enum
     {
@@ -70,7 +65,7 @@ private:
      */
     bool finalize_data()
     {
-        if (calculate_cksum(&_packet.data) != _packet.checksum)
+        if (check_cksum(&_packet) != 0)
             return false;
 
         _last_packet = _packet;
