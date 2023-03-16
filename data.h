@@ -85,14 +85,17 @@ struct steering_data {
 } __attribute((packed));
 
 struct car_data {
-    uint32 time;
+    
     struct ecvt_data ecvt;
     struct suspension_data sus;
     struct powertrain_data pt;
     struct electrons_data electrons;
     struct brakes_data brakes;
     struct steering_data steering;
+    uint32 time;
     uint8 marker;
+    uint8 launch;
+    uint8 writing;
 } __attribute__((packed));
 
 #endif
