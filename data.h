@@ -16,12 +16,17 @@ struct ecvt_data {
     int16 secondary_lcI;
     int16 secondary_lcD;
 
+    int16 pPID;
+    int16 pP;
+    int16 pI;
+    int16 pD;
+
     int8 state_primary;
     int8 state_secondary;
     int8 state_engine;
 
-    uint16 encoder_primary;
-    uint16 encoder_secondary;
+    int32 encoder_primary;
+    int32 encoder_secondary;
 
     int16 primary_controller_out;
     int16 secondary_controller_out;
