@@ -14,6 +14,8 @@ const int16 ECVT_DOWNSHIFT_LED_ADDR = 67;
 
 const int16 FR_ROT_POT_ADDR = 129;
 const int16 FL_ROT_POT_ADDR = 130;
+const int16 BR_ROT_POT_ADDR = 131;
+const int16 BL_ROT_POT_ADDR = 132;
 
 const int16 SPARK_ADDR = 194;
 
