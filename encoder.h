@@ -1,5 +1,6 @@
 #pragma once
 #include <Arduino.h>
+#include <communication/communication.h>
 
 template <typename T_DATA, typename T_PREAMBLE = uint16_t, typename T_CHECKSUM = uint16_t, T_PREAMBLE V_PREAMBLE = 0x6969>
 class Encoder
@@ -14,7 +15,7 @@ private:
     union
     {
         packet_t data;
-        uint8_t buf[];
+        uint8_t buf[sizeof(packet_t)];
     } _packet;
     
     void packet_t_send(T_DATA dat)
