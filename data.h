@@ -36,12 +36,12 @@ struct ecvt_data {
     int16 rwSpeed;
     int16 fBrakePressure;
     int16 rBrakePressure;
-    int16 engine_spark;
-    int16 primary emp;
-    int16 secondary emp;
-    int16 ir emp;
-    int16 fuel_level;
-    int16 throttle_pressure;
+    int16 engineSpark;
+    int16 primaryTemp;
+    int16 secondaryTemp;
+    int16 irTemp;
+    int16 fuelLevel;
+    int16 throttlePressure;
 } __attribute__((packed));
 
 struct suspension_data {
