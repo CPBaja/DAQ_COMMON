@@ -6,40 +6,40 @@
 
 struct ecvt_data {
     // Engine
-    int8_t eState;
-    int16_t ePID;
-    int16_t eP;
-    int16_t eI;
-    int16_t eD;
-    int16_t eSpeed;
+    int8 eState;
+    int16 ePID;
+    int16 eP;
+    int16 eI;
+    int16 eD;
+    int16 eSpeed;
     
     // Primary
-    int8_t pState;
-    int16_t pControllerOutput;
-    int32_t pEncoder;
-    int16_t pLoadCellForce;
-    int16_t pMotorCurrent;
+    int8 pState;
+    int16 pControllerOutput;
+    int32 pEncoder;
+    int16 pLoadCellForce;
+    int16 pMotorCurrent;
     
     // Secondary
-    int8_t sState;
-    int16_t sEncoderPID;
-    int16_t sLoadCellPID;
-    int16_t sLoadCellP;
-    int16_t sLoadCellI;
-    int16_t sLoadCellD;
-    int16_t sControllerOutput;
-    int32_t sEncoder;
-    int16_t sLoadCellForce;
-    int16_t sMotorCurrent;
+    int8 sState;
+    int16 sEncoderPID;
+    int16 sLoadCellPID;
+    int16 sLoadCellP;
+    int16 sLoadCellI;
+    int16 sLoadCellD;
+    int16 sControllerOutput;
+    int32 sEncoder;
+    int16 sLoadCellForce;
+    int16 sMotorCurrent;
     
     // Sensors
-    int16_t rwSpeed;
-    int16_t fBrakePressure;
-    int16_t rBrakePressure;
+    int16 rwSpeed;
+    int16 fBrakePressure;
+    int16 rBrakePressure;
     int16 engine_spark;
-    int16 primary_temp;
-    int16 secondary_temp;
-    int16 ir_temp;
+    int16 primary emp;
+    int16 secondary emp;
+    int16 ir emp;
     int16 fuel_level;
     int16 throttle_pressure;
 } __attribute__((packed));
@@ -52,7 +52,7 @@ struct suspension_data {
 } __attribute__((packed));
 
 struct powertrain_data {
-    uint16 gearbox_temp;
+    uint16 gearbox emp;
     uint16 gearbox_shaft_speed;
 } __attribute__((packed));
 
