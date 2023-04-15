@@ -45,37 +45,37 @@ struct ecvt_data {
 } __attribute__((packed));
 
 struct suspension_data {
-    uint16 bl_pot;
-    uint16 br_pot;
-    uint16 fl_pot;
-    uint16 fr_pot;
+    uint16 blPot;
+    uint16 brPot;
+    uint16 flPot;
+    uint16 frPot;
 } __attribute__((packed));
 
 struct powertrain_data {
-    uint16 gearbox emp;
-    uint16 gearbox_shaft_speed;
+    uint16 gearboxTemp;
+    uint16 gearboxShaftSpeed;
 } __attribute__((packed));
 
 struct electrons_data {
-    uint16 voltage_sense36;
-    uint16 voltage_sense8_4;
-    uint16 voltage_sense12;
-    uint16 voltage_sense24_1;
-    uint16 voltage_sense24_2;
-    uint16 current_sense_lvbattery;
-    uint16 current_sense_battery;
-    uint16 current_sense_motor1;
-    uint16 current_sense_motor2;
-    uint16 current_sense_solenoid;
+    uint16 voltageSense36;
+    uint16 voltageSense8_4;
+    uint16 voltageSense12;
+    uint16 voltageSense24_1;
+    uint16 voltageSense24_2;
+    uint16 currentSenseLvbattery;
+    uint16 currentSenseBattery;
+    uint16 currentSenseMotorP;
+    uint16 currentSenseMotorS;
+    uint16 currentSenseSolenoid;
 } __attribute__((packed));
 
 struct brakes_data {
-    uint16 fr_wheel_speed;
-    uint16 fl_wheel_speed;
+    uint16 frWheelSpeed;
+    uint16 flWheelSpeed;
 } __attribute__((packed));
 
 struct steering_data {
-    uint16 steering_rot_pot;
+    uint16 steeringRotPot;
 } __attribute((packed));
 
 struct car_data {
