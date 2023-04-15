@@ -5,49 +5,43 @@
 
 
 struct ecvt_data {
-    int16 enginePID;
-    int16 engineP;
-    int16 engineI;
-    int16 engineD;
-
-    int16 secondary_encPID;
-    int16 secondary_lcPID;
-    int16 secondary_lcP;
-    int16 secondary_lcI;
-    int16 secondary_lcD;
-
-    int16 pPID;
-    int16 pP;
-    int16 pI;
-    int16 pD;
-
-    int8 state_primary;
-    int8 state_secondary;
-    int8 state_engine;
-
-    int32 encoder_primary;
-    int32 encoder_secondary;
-
-    int16 primary_controller_out;
-    int16 secondary_controller_out;
+    // Engine
+    int8_t eState;
+    int16_t ePID;
+    int16_t eP;
+    int16_t eI;
+    int16_t eD;
+    int16_t eSpeed;
     
-    uint16 engine_speed_1;
-    uint16 engine_speed_2;
-    uint16 engine_spark;
-    uint16 rear_wheel_speed;
-    uint16 loadcell_primary;
-    uint16 loadcell_secondary;
-    uint16 primary_temp;
-    uint16 secondary_temp;
-    uint16 ir_temp;
-    uint16 fuel_level;
-    uint16 brake_pressure_front;
-    uint16 brake_pressure_rear;
-    uint16 throttle_pressure;
+    // Primary
+    int8_t pState;
+    int16_t pControllerOutput;
+    int32_t pEncoder;
+    int16_t pLoadCellForce;
+    int16_t pMotorCurrent;
     
+    // Secondary
+    int8_t sState;
+    int16_t sEncoderPID;
+    int16_t sLoadCellPID;
+    int16_t sLoadCellP;
+    int16_t sLoadCellI;
+    int16_t sLoadCellD;
+    int16_t sControllerOutput;
+    int32_t sEncoder;
+    int16_t sLoadCellForce;
+    int16_t sMotorCurrent;
     
-    
-    
+    // Sensors
+    int16_t rwSpeed;
+    int16_t fBrakePressure;
+    int16_t rBrakePressure;
+    int16 engine_spark;
+    int16 primary_temp;
+    int16 secondary_temp;
+    int16 ir_temp;
+    int16 fuel_level;
+    int16 throttle_pressure;
 } __attribute__((packed));
 
 struct suspension_data {
