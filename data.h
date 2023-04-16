@@ -3,8 +3,6 @@
 
 #include "types.h"
 
-int16 test = sizeof(ecvt_data);
-
 struct ecvt_data
 {
     uint32 time;
