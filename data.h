@@ -28,6 +28,9 @@ struct ecvt_data
     int16 pLoadCellForce;
     int16 pMotorCurrent;
     int16 pControllerOutput; // 40
+    int16 pP;
+    int16 pI;
+    int16 pD;
     // Secondary
     int8 sState;
     int32 sEncoder;
@@ -35,13 +38,15 @@ struct ecvt_data
     int16 sMotorCurrent;
     int16 sControllerOutput;
     int16 sEncoderPID;
+    int16 sEncoderP;
+    int16 sEncoderI;
+    int16 sEncoderD;
     int16 sLoadCellPID;
     int16 sLoadCellP;
     int16 sLoadCellI;
     int16 sLoadCellD; // 61
 
     // Sensors
-
     int16 engineSpark;
     int16 primaryTemp;
     int16 secondaryTemp;
