@@ -44,6 +44,13 @@ struct ecvt_data
     int16 sLoadCellI;
     int16 sLoadCellD; // 61
 
+    // PID Setpoints
+    int32 eRatioSetpoint;
+    int32 eOffsetSetpoint;
+    int32 pEncSetpoint;
+    int32 sEncSetpoint;
+    int32 slcSetpoint;
+
     // Sensors
     int16 engineSpark;
     int16 primaryTemp;
