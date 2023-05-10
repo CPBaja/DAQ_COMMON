@@ -3,9 +3,7 @@
 
 #include "types.h"
 
-struct ecvt_data
-{
-    uint32 time;
+struct ecvt_data {
     int16 rwSpeed;
     int16 fBrakePressure;
     int16 rBrakePressure; // 10
@@ -60,22 +58,19 @@ struct ecvt_data
     int16 throttlePressure;
 } __attribute__((packed));
 
-struct suspension_data
-{
+struct suspension_data {
     uint16 blPot;
     uint16 brPot;
     uint16 flPot;
     uint16 frPot;
 } __attribute__((packed));
 
-struct powertrain_data
-{
+struct powertrain_data {
     uint16 gearboxTemp;
     uint16 gearboxShaftSpeed;
 } __attribute__((packed));
 
-struct electrons_data
-{
+struct electrons_data {
     uint16 voltageSense36;
     uint16 voltageSense8_4;
     uint16 voltageSense12;
@@ -88,27 +83,24 @@ struct electrons_data
     uint16 currentSenseSolenoid;
 } __attribute__((packed));
 
-struct brakes_data
-{
+struct brakes_data {
     uint16 frWheelSpeed;
     uint16 flWheelSpeed;
 } __attribute__((packed));
 
-struct steering_data
-{
+struct steering_data {
     uint16 steeringRotPot;
 } __attribute((packed));
 
-struct car_data
-{
-
+struct car_data {
+    uint32 time;
     struct ecvt_data ecvt;
     struct suspension_data sus;
     struct powertrain_data pt;
     struct electrons_data electrons;
     struct brakes_data brakes;
     struct steering_data steering;
-    uint32 time;
+
     uint8 marker;
     uint8 launch;
     uint8 writing;
