@@ -76,6 +76,8 @@ struct electrons_data {
     uint16 voltageSense12;
     uint16 voltageSense24_1;
     uint16 voltageSense24_2;
+    uint8 hvBatteryPercent;
+    uint8 lvBatteryPercent;
     uint16 currentSenseLvbattery;
     uint16 currentSenseBattery;
     uint16 currentSenseMotorP;
