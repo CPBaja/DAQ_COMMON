@@ -15,6 +15,6 @@ public:
 
 private: 
     int8 pin;
-    int16 cachedPosition;
+    //int16 cachedPosition;
 }
 #endif
