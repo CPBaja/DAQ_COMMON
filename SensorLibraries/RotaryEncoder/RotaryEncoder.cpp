@@ -10,7 +10,7 @@ void RotaryPot::begin() {
 }
 
 void RotaryPot::read() {
-    cached = (analogRead(pin)-102)*(105/819);
+    Sensor::cached = (analogRead(pin)-102)*(105/819);
 }
 
 // int16 RotaryPot::getCached() {
