@@ -9,7 +9,7 @@ void FlowSensor::begin() {
 }
 
 void FlowSensor::read() {
-    cached = bitsToFlowRate(analogRead(pin));
+    Sensor::cached = bitsToFlowRate(analogRead(pin));
 }
 
 // int16 FlowSensor::getCached() {
