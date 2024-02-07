@@ -7,7 +7,7 @@
 
 class RotaryPot : public Sensor{
 public: 
-    RotaryPot()
+    RotaryPot();
 
     void begin();
     void read();

@@ -6,7 +6,7 @@
 
 class FlowSensor : public Sensor{
 public: 
-    FlowSensor()
+    FlowSensor();
 
     void begin();
     void read();
