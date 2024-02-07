@@ -1,9 +1,8 @@
-#ifndef _FLOWSENS_
-#define _FLOWSENS_
+#ifndef __FLOWSENS__
+#define __FLOWSENS__
 
-#include <Arduino.h>
-#include "Sensor.h"
-#include "../../lib/DAQ_Common/types.h"
+#include "../Sensor/Sensor.h"
+#include "../../types.h"
 
 class FlowSensor : public Sensor{
 public: 

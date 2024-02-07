@@ -1,9 +1,9 @@
-#ifndef _ROTARYPOT_
-#define _ROTARYPOT_
+#ifndef __ROTARYPOT__
+#define __ROTARYPOT__
 
-#include <Arduino.h>
-#include "Sensor.h"
-#include "../../lib/DAQ_Common/types.h"
+//#include <Arduino.h>
+#include "../Sensor/Sensor.h"
+#include "../../types.h"
 
 class RotaryPot : public Sensor{
 public: 
