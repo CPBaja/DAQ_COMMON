@@ -9,12 +9,12 @@ void FlowSensor::begin() {
 }
 
 void FlowSensor::read() {
-    cachedPosition = bitsToFlowRate(analogRead(pin));
+    cached = bitsToFlowRate(analogRead(pin));
 }
 
-int16 FlowSensor::getCached() {
-    return cachedPosition;
-}
+// int16 FlowSensor::getCached() {
+//     return cached;
+// }
 
 int16 FlowSensor::bitsToFlowRate(uint16 bits) {
     return flowLookup[bits];

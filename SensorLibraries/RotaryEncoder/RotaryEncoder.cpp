@@ -1,5 +1,5 @@
 
-#include "rotary_pot.h"
+#include "RotaryEncoder.h"
 
 RotaryPot::RotaryPot(int8 pin) {
     this->pin = pin;
@@ -10,9 +10,9 @@ void RotaryPot::begin() {
 }
 
 void RotaryPot::read() {
-    cachedPosition = (analogRead(pin)-102)*(105/819);
+    cached = (analogRead(pin)-102)*(105/819);
 }
 
-int16 RotaryPot::getCached() {
-    return cachedPosition;
-}
+// int16 RotaryPot::getCached() {
+//     return cachedPosition;
+// }

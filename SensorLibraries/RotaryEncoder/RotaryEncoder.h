@@ -11,7 +11,7 @@ public:
 
     void begin();
     void read();
-    int16 getCached();
+    //int16 getCached();
 
 private: 
     int8 pin;
