@@ -18,7 +18,7 @@ public:
 
     virtual void begin() = 0;
     virtual void read() = 0;
-    int16 getCached() = 0;
+    int16 getCached();
 
 private:
     int16 cached;
