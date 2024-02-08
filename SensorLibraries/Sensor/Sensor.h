@@ -20,7 +20,7 @@ public:
     virtual void read() = 0;
     int16 getCached();
 
-private:
+//private:
     int16 cached;
 };
 
