@@ -1,14 +1,13 @@
-#ifndef __ROTARYPOT__
-#define __ROTARYPOT__
+#ifndef __SteeringAngle__
+#define __SteeringAngle__
 
 // #include <Arduino.h>
 #include "../Sensor/Sensor.h"
-#include "../../types.h"
 
-class RotaryPot : public Sensor
+class steeringAnglePot : public Sensor
 {
 public:
-    RotaryPot(int8 pin);
+    steeringAnglePot(int8 pin);
 
     void begin();
     void read();
@@ -16,4 +15,5 @@ public:
 private:
     int8 pin;
 };
+
 #endif
