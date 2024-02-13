@@ -1,5 +1,5 @@
 #include "ClutchPressure.h"
-
+// silly me this is clutch pressure
 ClutchPressure::ClutchPressure(int8 pin) {
     this->pin = pin;
 }
