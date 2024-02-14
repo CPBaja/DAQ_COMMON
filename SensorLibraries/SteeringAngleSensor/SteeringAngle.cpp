@@ -12,5 +12,3 @@ void steeringAnglePot::read() {
   Sensor::cached =
       ((analogRead(this->pin) * ANGLE_MAX) / POT_MAX) - CENTER_OFFSET;
 }
-
-int16 getCached() { return Sensor::cached; }

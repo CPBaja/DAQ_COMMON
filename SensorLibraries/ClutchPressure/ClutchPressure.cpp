@@ -1,5 +1,5 @@
 #include "ClutchPressure.h"
-// silly me this is clutch pressure
+
 ClutchPressure::ClutchPressure(int8 pin) {
     this->pin = pin;
 }
@@ -7,7 +7,7 @@ ClutchPressure::ClutchPressure(int8 pin) {
 void ClutchPressure::begin() {
     pinMode(pin, INPUT);
 }
-
+//psi * 100
 void ClutchPressure::read() {
-    Sensor::cached = (analogRead(pin)-102)*(500/819);
+    Sensor::cached = (analogRead(pin)-102)*50000/819;
 }
