@@ -7,7 +7,7 @@ ClutchPressure::ClutchPressure(int8 pin) {
 void ClutchPressure::begin() {
     pinMode(pin, INPUT);
 }
-//psi * 10
+
 void ClutchPressure::read() {
-    Sensor::cached = (analogRead(pin)-102)*5000/819;
+    Sensor::cached = (analogRead(pin)-102)*1700/819;
 }
