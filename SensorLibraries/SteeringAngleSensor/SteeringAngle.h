@@ -3,6 +3,7 @@
 
 // #include <Arduino.h>
 #include "../Sensor/Sensor.h"
+#include "../../types.h"
 
 class steeringAnglePot : public Sensor {
   public:
