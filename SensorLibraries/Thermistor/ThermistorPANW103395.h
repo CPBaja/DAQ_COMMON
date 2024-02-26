@@ -4,6 +4,7 @@
 #define __THERMISTORPANW103395__
 
 //#include <Arduino.h>
+#include "Thermistor.h"
 #include "../Sensor/Sensor.h"
 #include "../../types.h"
 
