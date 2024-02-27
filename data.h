@@ -55,7 +55,7 @@ struct ecvt_data {
     int16 secondaryTemp;
     int16 irTemp;
     int16 fuelLevel;
-    int16 throttlePressure;
+    int16 throttlePosition;
 } __attribute__((packed));
 
 struct suspension_data {
@@ -92,6 +92,18 @@ struct steering_data {
     uint16 steeringRotPot;
 } __attribute((packed));
 
+struct imu_data {
+    int16 accelerationX;
+    int16 accelerationY;
+    int16 accelerationZ;
+    int16 pitchRate;
+    int16 yawRate;
+    int16 rollRate;
+    int16 gpsLatitude;
+    int16 gpsLongitude;
+    uint16 magnetometerHeading;
+} __attribute((packed));
+ 
 struct car_data {
     uint32 time;
     struct ecvt_data ecvt;
@@ -100,6 +112,7 @@ struct car_data {
     struct electrons_data electrons;
     struct brakes_data brakes;
     struct steering_data steering;
+    struct imu_data imu;
 
     uint8 marker;
     uint8 launch;
