@@ -45,10 +45,14 @@ void WheelSpeed::calc() {
 	difference exceeds the defined TIMEOUT constant (in microseconds), a value
 	of zero is returned to indicate that wheel is not moving. **/
 void WheelSpeed::read() {
+	#ifdef __TEENSY__
 	cli();
+	#endif
 	uint32_t curr = currTime;
 	uint32_t prev = prevTime;
+	#ifdef __TEENSY__
 	sei();
+	#endif
 
 	if(micros() - prev >= TIMEOUT) {
 		Sensor::cached = 0;

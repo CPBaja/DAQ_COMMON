@@ -13,5 +13,5 @@ void Thermistor::read() {
 }
 
 int16 Thermistor::bitsToTemp(uint16 bits) {
-    return thermLookup[bits]
+    return thermLookup[bits];
 }

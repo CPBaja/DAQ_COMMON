@@ -69,7 +69,7 @@ void EngineSpeed::calc()
 	16-bit integer. If the time difference exceeds the defined TIMEOUT constant
 	(in microseconds), a value of zero is returned to indicate that engine is
 	turned off. **/
-int16_t EngineSpeed::read()
+void EngineSpeed::read()
 {
 	#ifdef __TEENSY__
 	cli();
@@ -86,5 +86,5 @@ int16_t EngineSpeed::read()
 	}
 
 	// return 2000000 / (curr - prev); // Revolutions per Second (RPS)
-	Sensor::cached =  120000000 / (curr - prev); // Revolutions per Minute (RPM)
+	Sensor::cached = 120000000 / (curr - prev); // Revolutions per Minute (RPM)
 }
