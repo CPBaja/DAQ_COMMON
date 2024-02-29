@@ -20,7 +20,9 @@ void MotorVNH5019::begin()
 	pinMode(INA, OUTPUT);
 	pinMode(INB, OUTPUT);
 
+	#ifdef __TEENSY__
 	analogWriteFrequency(PWM, 29296.875);
+	#endif
 }
 
 void MotorVNH5019::setDutyCycle(int16_t dutyCycle)

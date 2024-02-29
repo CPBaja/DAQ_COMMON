@@ -71,10 +71,14 @@ void EngineSpeed::calc()
 	turned off. **/
 int16_t EngineSpeed::read()
 {
+	#ifdef __TEENSY__
 	cli();
+	#endif
 	uint32_t curr = currTime;
 	uint32_t prev = prevTime[pos];
+	#ifdef __TEENSY__
 	sei();
+	#endif
 
 	if (micros() - prev >= TIMEOUT)
 	{
@@ -82,5 +86,5 @@ int16_t EngineSpeed::read()
 	}
 
 	// return 2000000 / (curr - prev); // Revolutions per Second (RPS)
-	return 120000000 / (curr - prev); // Revolutions per Minute (RPM)
+	Sensor::cached =  120000000 / (curr - prev); // Revolutions per Minute (RPM)
 }

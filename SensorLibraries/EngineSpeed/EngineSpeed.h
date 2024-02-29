@@ -21,7 +21,7 @@ public:
 	void setISR(void (*isr)());
 	void begin();
 	void calc();
-	int16_t read();
+	void read();
 
 private:
 	int8_t pin;

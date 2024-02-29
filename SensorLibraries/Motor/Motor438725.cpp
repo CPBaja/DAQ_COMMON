@@ -19,7 +19,9 @@ void Motor438725::begin()
     pinMode(PWM, OUTPUT);
     pinMode(DIR, OUTPUT);
 
+    #ifdef __TEENSY__
     analogWriteFrequency(PWM, 4577.63671875);
+    #endif
 }
 
 void Motor438725::setDutyCycle(int16_t dutyCycle)

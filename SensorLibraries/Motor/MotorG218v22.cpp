@@ -19,7 +19,9 @@ void MotorG218v22::begin()
 	pinMode(PWM, OUTPUT);
 	pinMode(DIR, OUTPUT);
 
+	#ifdef __TEENSY__
 	analogWriteFrequency(PWM, 29296.875);
+	#endif
 }
 
 void MotorG218v22::setDutyCycle(int16_t dutyCycle)
