@@ -1,4 +1,4 @@
-#include "flow_sensor.h"
+#include "FlowSensor.h"
 
 FlowSensor::FlowSensor(int8 pin) {
     this->pin = pin;
