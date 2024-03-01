@@ -15,7 +15,7 @@ public:
 
 private:   
     int8 pin; 
-    int16 thermLookup[1024] = {0}; 
+    int16 thermLookup[1024]; 
     int16 bitsToTemp(uint16 bits);
 };
 
