@@ -1,6 +1,6 @@
 #include "ClutchPressure.h"
 
-ClutchPressure::ClutchPressure(int8 pin) {
+ClutchPressure::ClutchPressure(uint8 pin) {
     this->pin = pin;
 }
 

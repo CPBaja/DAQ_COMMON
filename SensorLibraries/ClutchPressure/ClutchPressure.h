@@ -7,12 +7,12 @@
 
 class ClutchPressure : public Sensor{
 public: 
-    ClutchPressure(int8 pin);
+    ClutchPressure(uint8 pin);
 
     void begin();
     void read();
 
 private: 
-    int8 pin;
+    uint8 pin;
 };
 #endif
