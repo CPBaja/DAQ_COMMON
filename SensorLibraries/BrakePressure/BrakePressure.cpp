@@ -4,10 +4,10 @@ ClutchPressure::ClutchPressure(int8 pin) {
     this->pin = pin;
 }
 
-void ClutchPressure::begin() {
+void BrakePressure::begin() {
     pinMode(pin, INPUT);
 }
 
-void ClutchPressure::read() {
+void BrakePressure::read() {
     Sensor::cached = (analogRead(pin)-102)*1700/819;
 }

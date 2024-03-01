@@ -82,7 +82,7 @@ void EngineSpeed::read()
 
 	if (micros() - prev >= TIMEOUT)
 	{
-		return 0;
+		Sensor::cached =  0;
 	}
 
 	// return 2000000 / (curr - prev); // Revolutions per Second (RPS)
