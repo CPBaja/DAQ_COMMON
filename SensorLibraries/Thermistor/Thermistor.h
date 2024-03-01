@@ -18,3 +18,5 @@ private:
     int16 thermLookup[1024] = {0}; 
     int16 bitsToTemp(uint16 bits);
 }
+
+#endif
