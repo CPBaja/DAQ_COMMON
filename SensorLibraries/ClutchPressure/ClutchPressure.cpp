@@ -5,7 +5,7 @@ ClutchPressure::ClutchPressure(int8 pin) {
 }
 
 void ClutchPressure::begin() {
-    pinMode(pin, INPUT);
+    pinMode(pin, INPUT_PULLDOWN);
 }
 //psi * 10
 void ClutchPressure::read() {
