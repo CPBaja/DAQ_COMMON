@@ -6,7 +6,7 @@
 
 class FlowSensor : public Sensor{
 public: 
-    FlowSensor(int8 pin);
+    FlowSensor(uint8 pin);
 
     void begin();
     void read();

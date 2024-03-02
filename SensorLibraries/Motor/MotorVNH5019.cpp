@@ -7,7 +7,7 @@
 #include <Arduino.h>
 #include "MotorVNH5019.h"
 
-MotorVNH5019::MotorVNH5019(int8_t PWM, int8_t INA, int8_t INB)
+MotorVNH5019::MotorVNH5019(uint8_t PWM, uint8_t INA, uint8_t INB)
 {
 	this->PWM = PWM;
 	this->INA = INA;

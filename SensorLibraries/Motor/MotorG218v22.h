@@ -4,8 +4,8 @@
  *	Released to Cal Poly Baja SAE. ;)
  */
 
-#ifndef MotorG218v22_h
-#define MotorG218v22_h
+#ifndef __MOTORG218v22__
+#define __MOTORG218v22__
 
 #include <Arduino.h>
 #include "Motor.h"
@@ -13,7 +13,7 @@
 class MotorG218v22 : public Motor
 {
 public:
-	MotorG218v22(int8_t PWM, int8_t DIR, bool invert);
+	MotorG218v22(uint8_t PWM, uint8_t DIR, bool invert);
 
 	void begin();
 	void setDutyCycle(int16_t dutyCycle);

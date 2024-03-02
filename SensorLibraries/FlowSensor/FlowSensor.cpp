@@ -1,6 +1,6 @@
 #include "FlowSensor.h"
 
-FlowSensor::FlowSensor(int8 pin) {
+FlowSensor::FlowSensor(uint8 pin) {
     this->pin = pin;
 }
 

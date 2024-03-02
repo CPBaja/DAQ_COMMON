@@ -12,7 +12,7 @@ const uint32_t TIMEOUT = 1000000;
 /** This constructor accepts the number of triggers per revolution and stores
 	it. The appropriate number of positions in the prevTime array and currTime
 	are initialized to the system time. **/
-EngineSpeed::EngineSpeed(int8_t pin, int8_t triggers)
+EngineSpeed::EngineSpeed(uint8_t pin, int8_t triggers)
 {
 	// Initialize variables
 	this->pin = pin;

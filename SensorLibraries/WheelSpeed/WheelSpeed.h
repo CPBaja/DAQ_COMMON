@@ -14,7 +14,7 @@
 class WheelSpeed : public Sensor {
 public:
 	// Constructor
-	WheelSpeed(int8_t pin, int8_t triggers);
+	WheelSpeed(uint8_t pin, uint8_t triggers);
 
 	// Methods
 	void setISR(void (*isr)());
@@ -23,8 +23,8 @@ public:
 	void read();
 
 private:
-	int8 pin;
-	int8 triggers;
+	uint8 pin;
+	uint8 triggers;
 
 
 	void (*isr)();

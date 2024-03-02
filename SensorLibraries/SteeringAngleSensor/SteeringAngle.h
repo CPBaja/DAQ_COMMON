@@ -1,5 +1,5 @@
-#ifndef __SteeringAngle__
-#define __SteeringAngle__
+#ifndef __STEERINGANGLE__
+#define __STEERINGANGLE__
 
 // #include <Arduino.h>
 #include "../Sensor/Sensor.h"

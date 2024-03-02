@@ -7,7 +7,7 @@
 
 class BrakePressure : public Sensor{
 public: 
-    BrakePressure(int8 pin);
+    BrakePressure(uint8 pin);
 
     void begin();
     void read();

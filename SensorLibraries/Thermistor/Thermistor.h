@@ -8,7 +8,7 @@
 class Thermistor : public Sensor
 {
 public:
-    Thermistor(int8 pin);
+    Thermistor(uint8 pin);
 
     void begin();
     void read();

@@ -4,8 +4,8 @@
  *  Released to Cal Poly Baja SAE. ;)
  */
 
-#ifndef EngineSpeed_h
-#define EngineSpeed_h
+#ifndef __ENGINESPEED__
+#define __ENGINESPEED__
 
 // #include <Arduino.h>
 #include "../Sensor/Sensor.h"
@@ -15,7 +15,7 @@ class EngineSpeed : public Sensor
 {
 public:
 	// Constructor
-	EngineSpeed(int8_t pin, int8_t triggers);
+	EngineSpeed(uint8_t pin, int8_t triggers);
 
 	// Methods
 	void setISR(void (*isr)());
@@ -24,7 +24,7 @@ public:
 	void read();
 
 private:
-	int8_t pin;
+	uint8_t pin;
 	int8_t triggers;
 
 	void (*isr)();

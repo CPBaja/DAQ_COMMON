@@ -1,6 +1,6 @@
 #include "BrakePressure.h"
 
-BrakePressure::BrakePressure(int8 pin) {
+BrakePressure::BrakePressure(uint8 pin) {
     this->pin = pin;
 }
 

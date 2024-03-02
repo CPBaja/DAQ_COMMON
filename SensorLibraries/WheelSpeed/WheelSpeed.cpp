@@ -12,7 +12,7 @@ const uint32_t TIMEOUT = 1000000;
 /** This constructor accepts the number of triggers per revolution and stores
 	it. prevTime and currTime are initialized to the system time. **/
     
-WheelSpeed::WheelSpeed(int8 pin, int8 triggers) {
+WheelSpeed::WheelSpeed(uint8 pin, uint8 triggers) {
 	// Initialize variables
 	this->pin = pin;
 	this->triggers = triggers;

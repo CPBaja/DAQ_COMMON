@@ -1,6 +1,6 @@
 #include "Thermistor.h"
 
-Thermistor::Thermistor(int8 pin) {
+Thermistor::Thermistor(uint8 pin) {
     this->pin = pin;
 }
 

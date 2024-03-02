@@ -7,7 +7,7 @@
 #include <Arduino.h>
 #include "MotorG218v22.h"
 
-MotorG218v22::MotorG218v22(int8_t PWM, int8_t DIR, bool invert)
+MotorG218v22::MotorG218v22(uint8_t PWM, uint8_t DIR, bool invert)
 {
 	this->PWM = PWM;
 	this->DIR = DIR;

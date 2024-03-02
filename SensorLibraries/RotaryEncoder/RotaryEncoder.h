@@ -8,7 +8,7 @@
 class RotaryPot : public Sensor
 {
 public:
-    RotaryPot(int8 pin);
+    RotaryPot(uint8 pin);
 
     void begin();
     void read();
