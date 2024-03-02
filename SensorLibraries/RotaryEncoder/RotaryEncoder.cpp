@@ -1,6 +1,6 @@
 #include "RotaryEncoder.h"
 
-RotaryPot::RotaryPot(int8 pin) {
+RotaryPot::RotaryPot(uint8 pin) {
     this->pin = pin;
 }
 

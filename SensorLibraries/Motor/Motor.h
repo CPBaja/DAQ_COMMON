@@ -4,8 +4,8 @@
  *	Released to Cal Poly Baja SAE. ;)
  */
 
-#ifndef Motor_h
-#define Motor_h
+#ifndef __MOTOR__
+#define __MOTOR__
 
 #include <Arduino.h>
 
