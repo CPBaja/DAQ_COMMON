@@ -3,30 +3,33 @@
 
 #include "types.h"
 
-const int16 SEND_DATA_ADDR = 1;
-const int16 LAUNCH_CONTROL_BUTTON_ADDR = 2;
-const int16 LOGGER_BUTTON_ADDR = 3;
-const int16 MARKER_BUTTON_ADDR = 4;
+const uint16 ECVT_DATA1 = 0x0;
+const uint16 ECVT_DATA2 = 0x1;
+const uint16 ECVT_DATA3 = 0x2;
+const uint16 ECVT_DATA4 = 0x3;
+const uint16 ECVT_DATA5 = 0x4;
+const uint16 ECVT_DATA6 = 0x5;
+const uint16 ECVT_DATA7 = 0x6;
+const uint16 ECVT_DATA8 = 0x7;
+const uint16 ECVT_DATA9 = 0x8;
+const uint16 ECVT_DATA10 = 0x9;
+const uint16 ECVT_DATA11 = 0xA;
+const uint16 ECVT_DATA12 = 0xB;
+const uint16 ECVT_DATA13 = 0xC;
+const uint16 ECVT_DATA14 = 0xD;
+const uint16 ECVT_DATA15 = 0xE;
+const uint16 ECVT_DATA16 = 0xF;
 
-const int16 ECVT_STATUS_LED_ADDR = 65;
-const int16 ECVT_UPSHIFT_LED_ADDR = 66;
-const int16 ECVT_DOWNSHIFT_LED_ADDR = 67;
+const uint16 SAS_DATA1 = 0x20;
+const uint16 SAS_DATA2 = 0x21;
+const uint16 SAS_DATA3 = 0x22;
+const uint16 SAS_DATA4 = 0x23;
 
-const int16 FR_ROT_POT_ADDR = 129;
-const int16 FL_ROT_POT_ADDR = 130;
-const int16 BR_ROT_POT_ADDR = 131;
-const int16 BL_ROT_POT_ADDR = 132;
+const uint16 CLUTCH_DATA1 = 0x10;
+const uint16 CLUTCH_DATA2 = 0x11;
+const uint16 CLUTCH_DATA3 = 0x12;
+const uint16 CLUTCH_DATA4 = 0x13;
 
-const int16 SPARK_ADDR = 194;
-
-const int16 FR_WHEEL_SPEED_ADDR = 257;
-const int16 FL_WHEEL_SPEED_ADDR = 258;
-const int16 GEAR_SHAFT_SPEED_ADDR = 259;
-
-const int16 GEAR_THERMAL_ADDR = 321;
-const int16 PRIMARY_MOT_TEMP_ADDR = 322;
-const int16 SECONDARY_MOT_TEMP_ADDR = 323;
-
-const int16 FUEL_PRESSURE_ADDR = 385;
+const uint16 IO = 0x3FF;
 
 #endif
