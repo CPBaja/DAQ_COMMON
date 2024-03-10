@@ -103,6 +103,13 @@ struct imu_data {
     int16 gpsLongitude;
     uint16 magnetometerHeading;
 } __attribute((packed));
+
+struct sas_data {
+    uint8 blPWM;
+    uint8 brPWM;
+    uint8 flPWM;
+    uint8 frPWM;
+} __attribute__((packed));
  
 struct car_data {
     uint32 time;
@@ -113,6 +120,7 @@ struct car_data {
     struct brakes_data brakes;
     struct steering_data steering;
     struct imu_data imu;
+    struct sas_data sas;
 
     uint8 marker;
     uint8 launch;
