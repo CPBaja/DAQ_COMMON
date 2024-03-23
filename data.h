@@ -121,10 +121,13 @@ struct car_data {
     struct steering_data steering;
     struct imu_data imu;
     struct sas_data sas;
-    uint8 IO;
-    uint8 marker;
+    
     uint8 launch;
-    uint8 writing;
+    uint8 logging;
+    uint8 susSoft;
+    uint8 susHard;
+    uint8 spare;
+    uint8 clutchMode;
 } __attribute__((packed));
 
 #endif
