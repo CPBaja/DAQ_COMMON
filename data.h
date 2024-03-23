@@ -121,7 +121,7 @@ struct car_data {
     struct steering_data steering;
     struct imu_data imu;
     struct sas_data sas;
-
+    uint8 IO;
     uint8 marker;
     uint8 launch;
     uint8 writing;
