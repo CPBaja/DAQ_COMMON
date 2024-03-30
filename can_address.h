@@ -32,4 +32,6 @@ const uint16 CLUTCH_DATA4 = 0x13;
 
 const uint16 IO = 0x3FF;
 
+const uint16 VOLTAGES = 0x400;
+
 #endif
