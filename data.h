@@ -4,58 +4,55 @@
 #include "types.h"
 
 struct ecvt_data {
-    int16 rwSpeed;
-    int16 fBrakePressure;
-    int16 rBrakePressure; // 10
-    // Engine
-    int8 eState;
-    int16 eSpeed;
-    int16 eControllerRatioOutput;
-    int16 eRatioP;
-    int16 eRatioI;
-    int16 eRatioD;
-    int16 eControllerOffsetOutput;
-    int16 eOffsetP;
-    int16 eOffsetI;
-    int16 eOffsetD; // 29
-    // Primary
-    int8 pState;
-    int32 pEncoder;
-    int16 pLoadCellForce;
-    int16 pMotorCurrent;
-    int16 pControllerOutput; // 40
-    int16 pP;
-    int16 pI;
-    int16 pD;
-    // Secondary
-    int8 sState;
-    int32 sEncoder;
-    int16 sLoadCellForce;
-    int16 sMotorCurrent;
-    int16 sControllerOutput;
-    int16 sEncoderPID;
-    int16 sEncoderP;
-    int16 sEncoderI;
-    int16 sEncoderD;
-    int16 sLoadCellPID;
-    int16 sLoadCellP;
-    int16 sLoadCellI;
-    int16 sLoadCellD; // 61
-
-    // PID Setpoints
-    int32 eRatioSetpoint;
-    int32 eOffsetSetpoint;
-    int32 pEncSetpoint;
-    int32 sEncSetpoint;
-    int32 slcSetpoint;
-
-    // Sensors
-    int16 engineSpark;
-    int16 primaryTemp;
-    int16 secondaryTemp;
-    int16 irTemp;
-    int16 fuelLevel;
-    int16 throttlePosition;
+        int8 errors;
+        int16 fBrakePressure;
+        int16 rBrakePressure;
+        // Engine
+        int8 eState;
+        int16 eControllerRatioOutput;
+        int32 eRatioSetpoint;
+        int16 eRatioP;
+        int16 eRatioI;
+        int16 eRatioI2;
+        int16 eControllerTorqueOutput;
+        int32 eTorqueSetpoint;
+        int16 eTorqueP;
+        int16 eTorqueI;
+        int16 eTorqueD;
+        // Primary
+        int8 pState;
+        int16 pSpeed;
+        int32 pEncoderCounts;
+        int16 pClampingForce;
+        int16 pMotorCurrent;
+        int16 pControllerOutput;
+        int32 pPositionSetpoint;
+        int16 pPositionPID;
+        int16 pPositionP;
+        int16 pPositionI;
+        int16 pPositionD;
+        int32 pClampingSetpoint;
+        int16 pClampingPID;
+        int16 pClampingP;
+        int16 pClampingI;
+        int16 pClampingD;
+        // Secondary
+        int8 sState;
+        int16 sSpeed;
+        int32 sEncoderCounts;
+        int16 sClampingForce;
+        int16 sMotorCurrent;
+        int16 sControllerOutput;
+        int32 sPositionSetpoint;
+        int16 sPositionPID;
+        int16 sPositionP;
+        int16 sPositionI;
+        int16 sPositionD;
+        int32 sClampingSetpoint;
+        int16 sClampingPID;
+        int16 sClampingP;
+        int16 sClampingI;
+        int16 sClampingD;
 } __attribute__((packed));
 
 struct suspension_data {
