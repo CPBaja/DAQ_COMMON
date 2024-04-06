@@ -6,8 +6,6 @@
 struct ecvt_data {
     uint32 time;
     int8 errors;
-    int16 fBrakePressure;
-    int16 rBrakePressure;
     // Engine
     int8 eState;
     int16 eControllerRatioOutput;
@@ -56,18 +54,6 @@ struct ecvt_data {
     int16 sClampingD;
 } __attribute__((packed));
 
-struct suspension_data {
-    uint16 blPot;
-    uint16 brPot;
-    uint16 flPot;
-    uint16 frPot;
-} __attribute__((packed));
-
-struct powertrain_data {
-    uint16 gearboxTemp;
-    uint16 gearboxShaftSpeed;
-} __attribute__((packed));
-
 struct electrons_data {
     uint16 voltageSenseBatt;
     uint16 voltageSense12;
@@ -80,15 +66,6 @@ struct electrons_data {
     uint16 currentSenseMotorS;
     uint16 currentSenseSolenoid;
 } __attribute__((packed));
-
-struct brakes_data {
-    uint16 frWheelSpeed;
-    uint16 flWheelSpeed;
-} __attribute__((packed));
-
-struct steering_data {
-    uint16 steeringRotPot;
-} __attribute((packed));
 
 struct imu_data {
     int16 accelerationX;
@@ -108,16 +85,35 @@ struct sas_data {
     uint8 flPWM;
     uint8 frPWM;
 } __attribute__((packed));
+
+struct front_breakout {
+    uint16 flPot;
+    uint16 frPot;
+    uint16 steeringRotPot;
+    uint16 frWheelSpeed;
+    uint16 flWheelSpeed;
+    int16 fBrakePressure;
+    int16 rBrakePressure;
+    uint16 brakePressureSwitch;
+} __attribute__((packed));
  
+struct rear_breakout {
+    uint16 throttlePosition;
+    uint16 blPot;
+    uint16 brPot;
+    uint16 gearboxShaftSpeed;
+    uint16 gearboxTemp;
+    uint16 spoolTemp;
+    uint16 fuelGauge;
+} __attribute__((packed));
+
 struct car_data {
     struct ecvt_data ecvt;
-    struct suspension_data sus;
-    struct powertrain_data pt;
     struct electrons_data electrons;
-    struct brakes_data brakes;
-    struct steering_data steering;
     struct imu_data imu;
     struct sas_data sas;
+    struct front_breakout front;
+    struct rear_breakout rear;
     
     uint8 launch;
     uint8 logging;
