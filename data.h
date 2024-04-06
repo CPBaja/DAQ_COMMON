@@ -94,14 +94,13 @@ struct front_breakout {
     uint16 flWheelSpeed;
     int16 fBrakePressure;
     int16 rBrakePressure;
-    uint16 brakePressureSwitch;
+    uint16 gearboxShaftSpeed;
 } __attribute__((packed));
  
 struct rear_breakout {
     uint16 throttlePosition;
     uint16 blPot;
     uint16 brPot;
-    uint16 gearboxShaftSpeed;
     uint16 gearboxTemp;
     uint16 spoolTemp;
     uint16 fuelGauge;
