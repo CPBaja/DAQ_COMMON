@@ -2,7 +2,6 @@
 #define __CAN_ADDRESS__
 
 #include "types.h"
-
 const uint16 ECVT_DATA1 = 0x0;
 const uint16 ECVT_DATA2 = 0x1;
 const uint16 ECVT_DATA3 = 0x2;
@@ -33,32 +32,19 @@ const uint16 CLUTCH_DATA4 = 0x13;
 const uint16 IO = 0x3FF;
 
 const uint16 VOLTAGES = 0x400;
+const uint16 CURRENTS = 0x401;
+const uint16 ELEC_DATA3 = 0x402;  // Battery percentage and solenoid current
 
-const uint16 FL_SPEED = 0x64;
-const uint16 FR_SPEED = 0x65;
+const uint16 FRONT_BREAKOUT_DATA1 = 0x403;  // flPot, frPot, steeringRotPot, gearboxShaftSpeed
+const uint16 FRONT_BREAKOUT_DATA2 = 0x404;  // frWheelSpeed, flWheelSpeed, fBrakePressure, rBrakePressure
 
-const uint16 FR_SUS_POS = 0x66;
-const uint16 FL_SUS_POS = 0x67;
-const uint16 RR_SUS_POS = 0x68;
-const uint16 RL_SUS_POS = 0x69;
-const uint16 ST_POS = 0x6A;
+const uint16 REAR_BREAKOUT_DATA1 = 0x405;  // blPot, brPot, throttlePosition
+const uint16 REAR_BREAKOUT_DATA2 = 0x406;  // gearboxTemp, spoolTemp, fuelGauge
 
-const uint16 CLUTCH_PRESS = 0xC8;
-const uint16 PROP_SPEED = 0xC9;
-const uint16 G_OIL_TEMP = 0xCA;
-const uint16 SPOOL_TEMP = 0xCB;
+const uint16 SAS_BUTTONS = 0x24;
 
-const uint8 SAS_HARD = 0x30;
-const uint8 SAS_SOFT = 0x31;
-
-const uint16 IMU_ACCEL_X = 0x190;
-const uint16 IMU_ACCEL_Y = 0x191;
-const uint16 IMU_ACCEL_Z = 0x192;
-const uint16 IMU_PITCH = 0x193;
-const uint16 IMU_YAW = 0x194;
-const uint16 IMU_ROLL = 0x195;
-const uint16 IMU_LATITUDE = 0x196;
-const uint16 IMU_LONGITUDE = 0x197;
-const uint16 IMU_MAG_HEADING = 0x198;
+const uint16 IMU_DATA1 = 0x407;  // x, y and z acceleration, heading
+const uint16 IMU_DATA2 = 0x408;  // Pitch, yaw, roll
+const uint16 IMU_DATA3 = 0x409;  // Latitude and longitude
 
 #endif
