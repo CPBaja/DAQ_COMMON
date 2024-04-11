@@ -8,6 +8,10 @@ struct ecvt_data {
     int8 errors;
     int16 fBrakePressure;
     int16 rBrakePressure;
+    int16 pSheaveTemp;
+    int16 pAmbientTemp;
+    int16 pMotorTemp;
+    int16 sMotorTemp;
     // Engine
     int8 eState;
     int16 eControllerRatioOutput;
@@ -54,10 +58,6 @@ struct ecvt_data {
     int16 sClampingP;
     int16 sClampingI;
     int16 sClampingD;
-    // Sensors
-    int16 beltTemp;
-    int16 pTemp;
-    int16 sTemp;
 } __attribute__((packed));
 
 struct electrons_data {
