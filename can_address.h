@@ -41,7 +41,7 @@ const uint16 FRONT_BREAKOUT_DATA2 = 0x404;  // flWheelSpeed, frWheelSpeed, fBrak
 const uint16 REAR_BREAKOUT_DATA1 = 0x405;  // blPot, brPot, throttlePosition
 const uint16 REAR_BREAKOUT_DATA2 = 0x406;  // gearboxTemp, spoolTemp, fuelGauge
 
-const uint16 SAS_BUTTONS = 0x24;
+const uint16 SAS_BUTTONS = 0x24;  // Hard button, soft button
 
 const uint16 IMU_DATA1 = 0x407;  // x, y and z acceleration, heading
 const uint16 IMU_DATA2 = 0x408;  // Pitch, yaw, roll
