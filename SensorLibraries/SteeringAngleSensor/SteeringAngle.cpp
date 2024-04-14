@@ -4,15 +4,15 @@
 #define CENTER_OFFSET 180
 #define ANGLE_MAX     360
 
-steeringAnglePot::steeringAnglePot(int8 pin) { 
+SteeringAngle::SteeringAngle(uint8 pin) { 
   this->pin = pin; 
   }
 
-void steeringAnglePot::begin() { 
+void SteeringAngle::begin() { 
   pinMode(this->pin, INPUT); 
   }
 
-void steeringAnglePot::read() {
+void SteeringAngle::read() {
   Sensor::cached =
       ((analogRead(this->pin) * ANGLE_MAX) / POT_MAX) - CENTER_OFFSET;
 }
