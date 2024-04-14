@@ -5,15 +5,15 @@
 #include "../Sensor/Sensor.h"
 #include "../../types.h"
 
-class steeringAnglePot : public Sensor {
+class SteeringAngle : public Sensor {
   public:
-  steeringAnglePot(int8 pin);
+  SteeringAngle(uint8 pin);
 
   void begin();
   void read();
 
   private:
-  int8 pin;
+  uint8 pin;
 };
 
 #endif

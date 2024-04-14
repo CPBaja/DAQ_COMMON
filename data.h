@@ -6,6 +6,12 @@
 struct ecvt_data {
     uint32 time;
     int8 errors;
+    int16 fBrakePressure;
+    int16 rBrakePressure;
+    int16 pSheaveTemp;
+    int16 pAmbientTemp;
+    int16 pMotorTemp;
+    int16 sMotorTemp;
     // Engine
     int8 eState;
     int16 eControllerRatioOutput;
