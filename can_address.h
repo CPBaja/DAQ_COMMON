@@ -36,12 +36,12 @@ const uint16 CURRENTS = 0x401;
 const uint16 ELEC_DATA3 = 0x402;  // Battery percentage and solenoid current
 
 const uint16 FRONT_BREAKOUT_DATA1 = 0x403;  // flPot, frPot, steeringRotPot, gearboxShaftSpeed
-const uint16 FRONT_BREAKOUT_DATA2 = 0x404;  // frWheelSpeed, flWheelSpeed, fBrakePressure, rBrakePressure
+const uint16 FRONT_BREAKOUT_DATA2 = 0x404;  // flWheelSpeed, frWheelSpeed, fBrakePressure, rBrakePressure
 
 const uint16 REAR_BREAKOUT_DATA1 = 0x405;  // blPot, brPot, throttlePosition
 const uint16 REAR_BREAKOUT_DATA2 = 0x406;  // gearboxTemp, spoolTemp, fuelGauge
 
-const uint16 SAS_BUTTONS = 0x24;
+const uint16 SAS_BUTTONS = 0x24;  // Hard button, soft button
 
 const uint16 IMU_DATA1 = 0x407;  // x, y and z acceleration, heading
 const uint16 IMU_DATA2 = 0x408;  // Pitch, yaw, roll
