@@ -76,6 +76,8 @@ struct electrons_data {
     uint16 currentSenseMotorP;
     uint16 currentSenseMotorS;
     uint16 currentSenseSolenoid;
+    int16 ambientTemp1;
+    int16 ambientTemp2;
 } __attribute__((packed));
 
 struct imu_data {
