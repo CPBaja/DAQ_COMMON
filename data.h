@@ -5,7 +5,7 @@
 
 struct ecvt_data {
     uint32 time;
-    int8 errors;
+    uint8 errors;
     int16 fBrakePressure;
     int16 rBrakePressure;
     int16 pSheaveTemp;
