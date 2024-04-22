@@ -59,8 +59,6 @@ struct ecvt_data {
     int16 sClampingI;
     int16 sClampingD;
     // Motor Controller Data
-    int16 pControllerCurrent;
-    int16 sControllerCurrent;
     int16 pControllerTemp;
     int16 sControllerTemp;
 } __attribute__((packed));
