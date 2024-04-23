@@ -5,7 +5,7 @@
 
 struct ecvt_data {
     uint32 time;
-    int8 errors;
+    uint8 errors;
     int16 fBrakePressure;
     int16 rBrakePressure;
     int16 pSheaveTemp;
@@ -58,6 +58,9 @@ struct ecvt_data {
     int16 sClampingP;
     int16 sClampingI;
     int16 sClampingD;
+    // Motor Controller Data
+    int16 pControllerTemp;
+    int16 sControllerTemp;
 } __attribute__((packed));
 
 struct electrons_data {
@@ -70,6 +73,8 @@ struct electrons_data {
     uint16 currentSenseMotorP;
     uint16 currentSenseMotorS;
     uint16 currentSenseSolenoid;
+    int16 ambientTemp1;
+    int16 ambientTemp2;
     uint8 batteryPercent;
 } __attribute__((packed));
 
