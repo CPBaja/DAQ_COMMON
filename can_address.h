@@ -19,8 +19,8 @@ const uint16 ECVT_DATA14 = 0xD;
 const uint16 ECVT_DATA15 = 0xE;
 const uint16 ECVT_DATA16 = 0xF;
 
-const uint16 SAS_DATA1 = 0x20;
-const uint16 SAS_DATA2 = 0x21;
+const uint16 SAS_DATA1 = 0x20;  // bl, br, fl, fr pwm values
+const uint16 SAS_DATA2 = 0x21;  // Current sas state
 const uint16 SAS_DATA3 = 0x22;
 const uint16 SAS_DATA4 = 0x23;
 
@@ -33,7 +33,7 @@ const uint16 IO = 0x3FF;
 
 const uint16 VOLTAGES = 0x400;
 const uint16 CURRENTS = 0x401;
-const uint16 ELEC_DATA3 = 0x402;  // Battery percentage and solenoid current
+const uint16 ELEC_DATA3 = 0x402;  // Solenoid current and battery percentage
 
 const uint16 FRONT_BREAKOUT_DATA1 = 0x403;  // flPot, frPot, steeringRotPot, gearboxShaftSpeed
 const uint16 FRONT_BREAKOUT_DATA2 = 0x404;  // flWheelSpeed, frWheelSpeed, fBrakePressure, rBrakePressure

@@ -65,24 +65,24 @@ struct electrons_data {
     uint16 voltageSense12;
     uint16 voltageSense5;
     uint16 voltageSense3V3;
-    uint8 batteryPercent;
     uint16 currentSenseLvbattery;
     uint16 currentSenseBattery;
     uint16 currentSenseMotorP;
     uint16 currentSenseMotorS;
     uint16 currentSenseSolenoid;
+    uint8 batteryPercent;
 } __attribute__((packed));
 
 struct imu_data {
     int16 accelerationX;
     int16 accelerationY;
     int16 accelerationZ;
+    uint16 magnetometerHeading;
     int16 pitchRate;
     int16 yawRate;
     int16 rollRate;
     int16 gpsLatitude;
     int16 gpsLongitude;
-    uint16 magnetometerHeading;
 } __attribute((packed));
 
 struct sas_data {
@@ -96,17 +96,18 @@ struct front_breakout {
     uint16 flPot;
     uint16 frPot;
     uint16 steeringRotPot;
+    uint16 gearboxShaftSpeed;
     uint16 frWheelSpeed;
     uint16 flWheelSpeed;
     int16 fBrakePressure;
     int16 rBrakePressure;
-    uint16 gearboxShaftSpeed;
+    
 } __attribute__((packed));
  
 struct rear_breakout {
-    uint16 throttlePosition;
     uint16 blPot;
     uint16 brPot;
+    uint16 throttlePosition;
     uint16 gearboxTemp;
     uint16 spoolTemp;
     uint16 fuelGauge;
