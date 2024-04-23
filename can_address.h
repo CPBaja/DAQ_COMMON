@@ -33,7 +33,7 @@ const uint16 IO = 0x3FF;
 
 const uint16 VOLTAGES = 0x400;
 const uint16 CURRENTS = 0x401;
-const uint16 ELEC_DATA3 = 0x402;  // Solenoid current and battery percentage
+const uint16 ELEC_DATA3 = 0x402;  // Solenoid current, ambient temps 1 and 2 and battery percentage
 
 const uint16 FRONT_BREAKOUT_DATA1 = 0x403;  // flPot, frPot, steeringRotPot, gearboxShaftSpeed
 const uint16 FRONT_BREAKOUT_DATA2 = 0x404;  // flWheelSpeed, frWheelSpeed, fBrakePressure, rBrakePressure
