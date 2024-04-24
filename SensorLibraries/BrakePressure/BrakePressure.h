@@ -13,6 +13,6 @@ public:
     void read();
 
 private: 
-    int8 pin;
+    uint8 pin;
 };
 #endif

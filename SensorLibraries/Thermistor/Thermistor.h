@@ -14,7 +14,7 @@ public:
     void read();
 
 private:   
-    int8 pin; 
+    uint8 pin; 
     int16 thermLookup[1024]; 
     int16 bitsToTemp(uint16 bits);
 };
