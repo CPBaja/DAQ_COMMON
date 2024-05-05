@@ -68,11 +68,10 @@ struct electrons_data {
     uint16 voltageSense12;
     uint16 voltageSense5;
     uint16 voltageSense3V3;
-    uint16 currentSenseLvbattery;
-    uint16 currentSenseBattery;
-    uint16 currentSenseMotorP;
-    uint16 currentSenseMotorS;
-    uint16 currentSenseSolenoid;
+    uint16 currentSenseBatt;
+    uint16 currentSense12V;
+    uint16 currentSense5V;
+    uint16 currentSense3V3;
     int16 ambientTemp1;
     int16 ambientTemp2;
     uint8 batteryPercent;
