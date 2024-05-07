@@ -19,8 +19,8 @@ const uint16 ECVT_DATA14 = 0xD;
 const uint16 ECVT_DATA15 = 0xE;
 const uint16 ECVT_DATA16 = 0xF;
 
-const uint16 SAS_DATA1 = 0x20;  // bl, br, fl, fr pwm values
-const uint16 SAS_DATA2 = 0x21;  // Current sas state
+const uint16 SAS_DATA1 = 0x20;  // bl, br, fl, fr pwm values, current sas state
+const uint16 SAS_DATA2 = 0x21;
 const uint16 SAS_DATA3 = 0x22;
 const uint16 SAS_DATA4 = 0x23;
 
