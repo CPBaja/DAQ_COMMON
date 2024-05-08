@@ -6,6 +6,7 @@
 struct ecvt_data {
     uint32 time;
     uint8 errors;
+    // Sensors
     int16 fBrakePressure;
     int16 rBrakePressure;
     int16 pSheaveTemp;
@@ -30,6 +31,8 @@ struct ecvt_data {
     int32 pEncoderCounts;
     int16 pClampingForce;
     int16 pMotorCurrent;
+    int16 pControllerTemp;
+    // Primary Controller
     int16 pControllerOutput;
     int32 pPositionSetpoint;
     int16 pPositionPID;
@@ -47,6 +50,8 @@ struct ecvt_data {
     int32 sEncoderCounts;
     int16 sClampingForce;
     int16 sMotorCurrent;
+    int16 sControllerTemp;
+    // Secondary Controller
     int16 sControllerOutput;
     int32 sPositionSetpoint;
     int16 sPositionPID;
@@ -58,9 +63,8 @@ struct ecvt_data {
     int16 sClampingP;
     int16 sClampingI;
     int16 sClampingD;
-    // Motor Controller Data
-    int16 pControllerTemp;
-    int16 sControllerTemp;
+    // Miscellaneous
+    int8 launchControlDisplayMode;
 } __attribute__((packed));
 
 struct electrons_data {
@@ -78,15 +82,15 @@ struct electrons_data {
 } __attribute__((packed));
 
 struct imu_data {
+    int32 gpsLatitude;
+    int32 gpsLongitude;
+    int16 gpsAltitude;
     int16 accelerationX;
     int16 accelerationY;
     int16 accelerationZ;
-    uint16 magnetometerHeading;
     int16 pitchRate;
     int16 yawRate;
     int16 rollRate;
-    int16 gpsLatitude;
-    int16 gpsLongitude;
 } __attribute((packed));
 
 struct sas_data {
