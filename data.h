@@ -105,11 +105,10 @@ struct front_breakout {
     uint16 frPot;
     uint16 steeringRotPot;
     uint16 gearboxShaftSpeed;
-    uint16 frWheelSpeed;
     uint16 flWheelSpeed;
+    uint16 frWheelSpeed;
     int16 fBrakePressure;
     int16 rBrakePressure;
-    
 } __attribute__((packed));
  
 struct rear_breakout {
