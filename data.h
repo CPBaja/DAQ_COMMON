@@ -91,6 +91,7 @@ struct imu_data {
     int16 pitchRate;
     int16 yawRate;
     int16 rollRate;
+    uint8 numSatelites;
 } __attribute((packed));
 
 struct sas_data {
