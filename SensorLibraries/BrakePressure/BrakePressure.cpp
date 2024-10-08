@@ -9,5 +9,7 @@ void BrakePressure::begin() {
 }
 
 void BrakePressure::read() {
-    Sensor::cached = (analogRead(pin)-102)*1700/819;
+    //TDH33
+    //scale = x10
+    Sensor::cached = ((analogRead(pin)*10) - 4096)*3000/32768;
 }
