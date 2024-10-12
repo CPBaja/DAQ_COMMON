@@ -8,29 +8,14 @@
 #define WheelSpeed_h
 
 // #include <Arduino.h>
-#include "../Sensor/Sensor.h"
-#include "../../types.h"
+#include "RotarySpeed.h"
 
-class WheelSpeed : public Sensor {
+class WheelSpeed : public RotarySpeed {
 public:
 	// Constructor
 	WheelSpeed(uint8_t pin, uint8_t triggers);
-
-	// Methods
-	void setISR(void (*isr)());
-	void begin();
-	void calc();
-	void read();
-
 private:
-	uint8 pin;
-	uint8 triggers;
-
-
-	void (*isr)();
-
-	volatile uint32_t prevTime;
-	volatile uint32_t currTime;
+	int32 cache_num = 60000000;
 };
 
 #endif
