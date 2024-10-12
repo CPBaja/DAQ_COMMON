@@ -9,5 +9,6 @@ void RotaryPot::begin() {
 }
 
 void RotaryPot::read() {
-    Sensor::cached = ((analogRead(pin)*105)/819)-13;
+    // analogRead(pin) and 4096 were both multiplied by 10 so convert as needed
+    Sensor::cached = ((525*((analogRead(pin)*10)-4096))/16384);
 }
