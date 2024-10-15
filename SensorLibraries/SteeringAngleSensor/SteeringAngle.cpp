@@ -1,6 +1,6 @@
 #include "SteeringAngle.h"
 
-#define POT_MAX       1023
+#define POT_MAX       4095
 #define CENTER_OFFSET 180
 #define ANGLE_MAX     360
 
